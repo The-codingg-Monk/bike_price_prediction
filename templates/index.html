@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
     <head> 
-    <style type="text/css">
-        label{
-            width:100px;
-            display:inline-block;
-            margin:4px;
+        <title>
+            Bike price prediction
+        </title>
+
+    <style>
+        body{
+            background-image: url("/static/image.jpg");
         }
-        #form {
-            border-radius:10px;
-            background-color: blueviolet;
-            color:white;
+        #form{
             width:500px;
-            padding:20px;
+            background-color: cyan;
+            position:absolute;
+            left:10px;
+            height: 500px;
+            border-radius: 20px;
+            
+
         }
+        .select,.input{
+            /* width:200px;
+            display:inline-block; */
+            
+            /* width: 300px;
+            border: 2px solid #000;
+            padding: 0;
+            margin: 0;
+            height: 22px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box; */
+            position:relative;
+            left: 80px;
+            width: 200px;  
+            height: 20px;
+            
+            
+        }
+        .select{
+            height: 27px;
+            width:208px ;
+        }
+        #submit{
+            position:absolute;
+            left: 280px;
+            width: 80px; 
+            border-radius: 5px;
+
+        }
+        .text_data{
+            position:absolute;
+            left: 80px;
+            font-size:large;
+            font-style: oblique;
+            font-weight: bold;
+
+        }
+        #result{
+            position:absolute;
+            left: 80px;
+            font-weight: bold;
+            font-size: larger;
+            font-style:normal
+
+        }
+        #return{
+            color:brown
+        }
+    
+       
+        
     </style>
     </head>
 <body>
     <div id="form">
         <center><h1><head> Bike Price Prediction</head></h1></center>
     <form action="core_fun" method="POST">
-   <center> <label for ="bikes">Select a bike :</label>
+   <center> <label  class="text_data">Select a bike :</label>
 
-<select name="bike">
+<select name="bike" class="select" >
     
     <option value="Bajaj Pulsar 150cc"> Bajaj Pulsar 150cc</option>
     <option value="Bajaj Avenger Street 220"> Bajaj Avenger Street 220</option>
@@ -86,8 +143,8 @@
     <option value="Honda Dream Yuga 110cc"> Honda Dream Yuga 110cc</option>
 
 </select></center><br>
-<center><label>Select a city:</label>
-<select name="city">
+<center><label class="text_data">Select a city:</label>
+<select name="city" class="select">
     <option value="Delhi"> Delhi</option>
 <option value="Bangalore"> Bangalore</option>
 <option value="Mumbai"> Mumbai</option>
@@ -150,8 +207,8 @@
 <option value="Meerut"> Meerut</option>
 
 </select></center><br>
-<center><lable>Select a brand:</lable>
-<select name="brand">
+<center><lable class="text_data">Select a brand:</lable>
+<select name="brand" class="select">
     <option value="Bajaj"> Bajaj</option>
 <option value="Hero"> Hero</option>
 <option value="Royal Enfield"> Royal Enfield</option>
@@ -176,27 +233,29 @@
 <option value="LML"> LML</option>
 <option value="Yezdi"> Yezdi</option>
 </select></center><br>
-<center><label>Owner:</label>
-<select name="owner">
+<center><label class="text_data">Owner:</label>
+<select name="owner" class="select">
     <option value='First Owner'>First owner</option>
     <option value='Second Owner'>Second owner</option>
     <option value='Third Owner'>Third Owner</option>
     <option value='Fourth Owner Or More'>Fourth Owner Or More</option>
 </select></center><br>
 
-<center><lable>Age of bike(in yrs):</lable>
-<input type="text" name="age" placeholder="Enter Age of bike"></center><br>
-<center><lable>Kms driven:</lable>
-<input type="text" name="kms_driven" placeholder="Enter kms driven"></center><br>
-<center><lable>Power in cc:</lable>
-<input type="text" name="power" placeholder="Enter power"></center><br>
 
-<center><input type="submit" value="Submit"></center><br>
+<center><lable class="text_data">Age of bike(in yrs):</lable>
+<input type="text" name="age" class="input" placeholder="Enter Age of bike"></center><br>
+<center><lable class="text_data">Kms driven:</lable>
+<input type="text" name="kms_driven" class="input" placeholder="Enter kms driven"></center><br>
+<center><lable class="text_data">Power in cc:</lable>
+<input type="text" name="power" class="input" placeholder="Enter power"></center><br>
 
-<bold>
-    Best predicted price: {{prediction_result}}
-</bold>
+<center><input type="submit" id="submit" value="Submit"></center><br><br><br>
+
+
 </form>
+<bold id="result">
+    Best predicted price: <small id="return">{{prediction_result}}</small>
+</bold>
 </div>
 
     

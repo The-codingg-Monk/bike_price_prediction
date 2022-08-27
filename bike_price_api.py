@@ -43,9 +43,9 @@ def core_fun():
         x_encoded=transformer.transform(x)
 
         prediction_result=model.predict(x_encoded)
-
+        prediction_result=str(prediction_result[0])+" ₹"
     
-        return render_template("index.html",prediction_result=prediction_result[0])
+        return render_template("index.html",prediction_result=prediction_result)
     else:
         prediction_result="Please enter complete data."
         return render_template("index.html",prediction_result=prediction_result)
