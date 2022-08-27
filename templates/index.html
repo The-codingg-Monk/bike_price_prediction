@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+    <style type="text/css">
+        label{
+            width:100px;
+            display:inline-block;
+            margin:4px;
+        }
+        #form {
+            border-radius:10px;
+            background-color: blueviolet;
+            color:white;
+            width:500px;
+            padding:20px;
+        }
+    </style>
+    </head>
+<body>
+    <div id="form">
+        <center><h1><head> Bike Price Prediction</head></h1></center>
+    <form action="core_fun" method="POST">
+   <center> <label for ="bikes">Select a bike :</label>
+
+<select name="bike">
+    
+    <option value="Bajaj Pulsar 150cc"> Bajaj Pulsar 150cc</option>
+    <option value="Bajaj Avenger Street 220"> Bajaj Avenger Street 220</option>
+    <option value="Bajaj Avenger 220cc"> Bajaj Avenger 220cc</option>
+    <option value="Royal Enfield Classic 350cc"> Royal Enfield Classic 350cc</option>
+    <option value="Hero Passion Pro 100cc"> Hero Passion Pro 100cc</option>
+    <option value="Hero Passion 100cc"> Hero Passion 100cc</option>
+    <option value="Royal Enfield Thunderbird 350cc"> Royal Enfield Thunderbird 350cc</option>
+    <option value="Yamaha YZF-R15 2.0 150cc"> Yamaha YZF-R15 2.0 150cc</option>
+    <option value="Royal Enfield Bullet Electra 350cc"> Royal Enfield Bullet Electra 350cc</option>
+    <option value="Bajaj Pulsar NS200"> Bajaj Pulsar NS200</option>
+    <option value="KTM RC 390cc"> KTM RC 390cc</option>
+    <option value="Bajaj Dominar 400 ABS"> Bajaj Dominar 400 ABS</option>
+    <option value="Hero CD Deluxe 100cc"> Hero CD Deluxe 100cc</option>
+    <option value="Bajaj Platina 100cc"> Bajaj Platina 100cc</option>
+    <option value="Hero CBZ Xtreme 150cc"> Hero CBZ Xtreme 150cc</option>
+    <option value="Honda CB Trigger 150cc"> Honda CB Trigger 150cc</option>
+    <option value="TVS Apache RTR 180cc"> TVS Apache RTR 180cc</option>
+    <option value="Yamaha Fazer 150cc"> Yamaha Fazer 150cc</option>
+    <option value="Yamaha FZ 150cc"> Yamaha FZ 150cc</option>
+    <option value="Hero Super Splendor 125cc"> Hero Super Splendor 125cc</option>
+    <option value="Honda CB Hornet 160R STD"> Honda CB Hornet 160R STD</option>
+    <option value="Harley-Davidson Street 750 ABS"> Harley-Davidson Street 750 ABS</option>
+    <option value="Hero Hunk Rear Disc 150cc"> Hero Hunk Rear Disc 150cc</option>
+    <option value="Suzuki Slingshot Plus 125cc"> Suzuki Slingshot Plus 125cc</option>
+    <option value="Yamaha SZ-RR 150cc"> Yamaha SZ-RR 150cc</option>
+    <option value="Yamaha Fazer 25 250cc"> Yamaha Fazer 25 250cc</option>
+    <option value="Suzuki Zeus 125cc"> Suzuki Zeus 125cc</option>
+    <option value="Hero Splendor Plus 100cc"> Hero Splendor Plus 100cc</option>
+    <option value="Honda CB Shine 125cc"> Honda CB Shine 125cc</option>
+    <option value="Bajaj V15 150cc"> Bajaj V15 150cc</option>
+    <option value="Bajaj Avenger Street 150"> Bajaj Avenger Street 150</option>
+    <option value="TVS Apache RTR 160cc"> TVS Apache RTR 160cc</option>
+    <option value="Yamaha FZs 150cc"> Yamaha FZs 150cc</option>
+    <option value="KTM Duke 390cc"> KTM Duke 390cc</option>
+    <option value="Bajaj Pulsar RS200 ABS"> Bajaj Pulsar RS200 ABS</option>
+    <option value="KTM RC 200cc"> KTM RC 200cc</option>
+    <option value="Bajaj Discover 125cc"> Bajaj Discover 125cc</option>
+    <option value="Royal Enfield Thunderbird 500cc"> Royal Enfield Thunderbird 500cc</option>
+    <option value="Hero HF Deluxe 100cc"> Hero HF Deluxe 100cc</option>
+    <option value="Bajaj Pulsar 220cc"> Bajaj Pulsar 220cc</option>
+    <option value="Bajaj Pulsar 180cc"> Bajaj Pulsar 180cc</option>
+    <option value="KTM Duke 200cc"> KTM Duke 200cc</option>
+    <option value="Royal Enfield Classic 500cc"> Royal Enfield Classic 500cc</option>
+    <option value="Bajaj Pulsar RS200"> Bajaj Pulsar RS200</option>
+    <option value="Bajaj CT 100 100cc"> Bajaj CT 100 100cc</option>
+    <option value="Hero Passion Plus 100cc"> Hero Passion Plus 100cc</option>
+    <option value="Bajaj Discover 100cc"> Bajaj Discover 100cc</option>
+    <option value="Bajaj Pulsar 135LS"> Bajaj Pulsar 135LS</option>
+    <option value="Honda CBF Stunner 125cc"> Honda CBF Stunner 125cc</option>
+    <option value="Bajaj Avenger Cruise 220"> Bajaj Avenger Cruise 220</option>
+    <option value="Honda CBR 150R 150cc"> Honda CBR 150R 150cc</option>
+    <option value="Honda CB Unicorn 150cc"> Honda CB Unicorn 150cc</option>
+    <option value="Yamaha YZF-R15 150cc"> Yamaha YZF-R15 150cc</option>
+    <option value="Bajaj Pulsar 220F"> Bajaj Pulsar 220F</option>
+    <option value="Harley-Davidson Street 750"> Harley-Davidson Street 750</option>
+    <option value="Hero Splendor Pro 100cc"> Hero Splendor Pro 100cc</option>
+    <option value="Suzuki Gixxer 150cc"> Suzuki Gixxer 150cc</option>
+    <option value="Royal Enfield Bullet Twinspark 350cc"> Royal Enfield Bullet Twinspark 350cc</option>
+    <option value="Royal Enfield Bullet 350cc"> Royal Enfield Bullet 350cc</option>
+    <option value="Honda Dream Yuga 110cc"> Honda Dream Yuga 110cc</option>
+
+</select></center><br>
+<center><label>Select a city:</label>
+<select name="city">
+    <option value="Delhi"> Delhi</option>
+<option value="Bangalore"> Bangalore</option>
+<option value="Mumbai"> Mumbai</option>
+<option value="Hyderabad"> Hyderabad</option>
+<option value="Pune"> Pune</option>
+<option value="Chennai"> Chennai</option>
+<option value="Lucknow"> Lucknow</option>
+<option value="Jaipur"> Jaipur</option>
+<option value="Ghaziabad"> Ghaziabad</option>
+<option value="Ahmedabad"> Ahmedabad</option>
+<option value="Noida"> Noida</option>
+<option value="Bhopal"> Bhopal</option>
+<option value="Gautam Buddha Nagar"> Gautam Buddha Nagar</option>
+<option value="Kanchipuram"> Kanchipuram</option>
+<option value="Jodhpur"> Jodhpur</option>
+<option value="Karnal"> Karnal</option>
+<option value="Rupnagar"> Rupnagar</option>
+<option value="Allahabad"> Allahabad</option>
+<option value="Gurgaon"> Gurgaon</option>
+<option value="Godhara"> Godhara</option>
+<option value="Faridabad"> Faridabad</option>
+<option value="Kadapa"> Kadapa</option>
+<option value="Perumbavoor"> Perumbavoor</option>
+<option value="Ludhiana"> Ludhiana</option>
+<option value="Kolkata"> Kolkata</option>
+<option value="Thane"> Thane</option>
+<option value="Jhansi"> Jhansi</option>
+<option value="Vadodara"> Vadodara</option>
+<option value="Surat"> Surat</option>
+<option value="Jalandhar"> Jalandhar</option>
+<option value="Chandigarh"> Chandigarh</option>
+<option value="Rajkot"> Rajkot</option>
+<option value="Indore"> Indore</option>
+<option value="Dehradun"> Dehradun</option>
+<option value="Patna"> Patna</option>
+<option value="Navi Mumbai"> Navi Mumbai</option>
+<option value="Nagpur"> Nagpur</option>
+<option value="Coimbatore"> Coimbatore</option>
+<option value="Tiruvallur"> Tiruvallur</option>
+<option value="Guwahati"> Guwahati</option>
+<option value="Bhubaneshwar"> Bhubaneshwar</option>
+<option value="Howrah"> Howrah</option>
+<option value="Kanpur"> Kanpur</option>
+<option value="Aurangabad"> Aurangabad</option>
+<option value="Cuttack"> Cuttack</option>
+<option value="Visakhapatnam"> Visakhapatnam</option>
+<option value="Alibag"> Alibag</option>
+<option value="Alipore"> Alipore</option>
+<option value="Kalyan"> Kalyan</option>
+<option value="Nashik"> Nashik</option>
+<option value="Ranchi"> Ranchi</option>
+<option value="Udaipur"> Udaipur</option>
+<option value="Rohtak"> Rohtak</option>
+<option value="Agra"> Agra</option>
+<option value="Kota"> Kota</option>
+<option value="Gorakhpur"> Gorakhpur</option>
+<option value="24 Pargana"> 24 Pargana</option>
+<option value="Ernakulam"> Ernakulam</option>
+<option value="Gandhinagar"> Gandhinagar</option>
+<option value="Meerut"> Meerut</option>
+
+</select></center><br>
+<center><lable>Select a brand:</lable>
+<select name="brand">
+    <option value="Bajaj"> Bajaj</option>
+<option value="Hero"> Hero</option>
+<option value="Royal Enfield"> Royal Enfield</option>
+<option value="Yamaha"> Yamaha</option>
+<option value="Honda"> Honda</option>
+<option value="Suzuki"> Suzuki</option>
+<option value="TVS"> TVS</option>
+<option value="KTM"> KTM</option>
+<option value="Harley-Davidson"> Harley-Davidson</option>
+<option value="Kawasaki"> Kawasaki</option>
+<option value="Hyosung"> Hyosung</option>
+<option value="Benelli"> Benelli</option>
+<option value="Mahindra"> Mahindra</option>
+<option value="Triumph"> Triumph</option>
+<option value="Ducati"> Ducati</option>
+<option value="BMW"> BMW</option>
+<option value="Jawa"> Jawa</option>
+<option value="MV"> MV</option>
+<option value="Indian"> Indian</option>
+<option value="Ideal"> Ideal</option>
+<option value="Rajdoot"> Rajdoot</option>
+<option value="LML"> LML</option>
+<option value="Yezdi"> Yezdi</option>
+</select></center><br>
+<center><label>Owner:</label>
+<select name="owner">
+    <option value='First Owner'>First owner</option>
+    <option value='Second Owner'>Second owner</option>
+    <option value='Third Owner'>Third Owner</option>
+    <option value='Fourth Owner Or More'>Fourth Owner Or More</option>
+</select></center><br>
+
+<center><lable>Age of bike(in yrs):</lable>
+<input type="text" name="age"></center><br>
+<center><lable>Kms driven:</lable>
+<input type="text" name="kms_driven"></center><br>
+<center><lable>Power in cc:</lable>
+<input type="text" name="power"></center><br>
+
+<center><input type="submit" value="Submit"></center><br>
+
+<bold>
+    Best predicted price: {{prediction_result}}
+</bold>
+</form>
+</div>
+
+    
+</body>
+</html>
