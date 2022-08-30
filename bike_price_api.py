@@ -9,8 +9,8 @@ app=Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/core_fun",methods=["POST"])
-def core_fun():
+@app.route("/Prediction",methods=["POST"])
+def Prediction():
     bike=request.form["bike"]
     city=request.form["city"]
     brand=request.form["brand"]
@@ -55,4 +55,4 @@ def core_fun():
 
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(host ="0.0.0.0",port=8080,debug=False)
